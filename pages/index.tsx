@@ -6,7 +6,7 @@ import { useState } from "react";
 import Loading from "../Components/Loader";
 import { motion as m } from "framer-motion";
 import StaticPostCont from "../Components/StaticPostCont";
-const LIMIT = 1;
+const LIMIT = 4;
 
 export async function getServerSideProps(context: any) {
   const postsQuery = firestore
