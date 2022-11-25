@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { firestore, auth, increment } from '../lib/firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import { HeartBreak, HeartIcon } from '../assets/Icons';
