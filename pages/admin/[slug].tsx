@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styles from "../../styles/Admin.module.css";
 import AuthCheck from "../../lib/AuthCheck";
 import { firestore, auth, serverTimestamp } from "../../lib/firebase";

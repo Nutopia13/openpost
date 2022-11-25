@@ -1,3 +1,4 @@
+// @ts-nocheck
 import PostContent from "../../Components/PostContent";
 import { firestore, getUserWithUsername, postToJSON } from "../../lib/firebase";
 import { useDocumentData } from "react-firebase-hooks/firestore";
