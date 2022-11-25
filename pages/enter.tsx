@@ -1,4 +1,4 @@
-import React from "react";
+// @ts-nocheck
 import { auth, firestore, googleAuthProvider } from "../lib/firebase";
 import { GoogleIcon } from "../assets/Icons";
 import { useContext } from "react";

@@ -1,7 +1,5 @@
 import Link from "next/link";
-import React from "react";
 import { HeartIcon } from "../assets/Icons";
-import ReactMarkdown from "react-markdown";
 
 const Tutorial = () => {
   return (

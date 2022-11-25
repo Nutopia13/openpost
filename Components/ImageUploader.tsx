@@ -1,7 +1,8 @@
+// @ts-nocheck
 import { useState } from "react";
 import { auth, storage, STATE_CHANGED } from "../lib/firebase";
 import Loader from "./Loader";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { motion as m } from "framer-motion";
 import toast from "react-hot-toast";
 // Uploads images to Firebase Storage

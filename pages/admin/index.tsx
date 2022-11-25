@@ -1,3 +1,4 @@
+// @ts-nocheck
 import AuthCheck from "../../lib/AuthCheck";
 import PostFeed from "../../Components/PostFeed";
 import { UserContext } from "../../lib/context";

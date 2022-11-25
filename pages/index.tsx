@@ -1,5 +1,4 @@
 import React from "react";
-import CardPostCont from "../Components/CardPostCont";
 import Hero from "../Components/HeroSec";
 import PostFeed from "../Components/PostFeed";
 import { firestore, fromMillis, postToJSON } from "../lib/firebase";
@@ -9,7 +8,7 @@ import { motion as m } from "framer-motion";
 import StaticPostCont from "../Components/StaticPostCont";
 const LIMIT = 1;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
   const postsQuery = firestore
     .collectionGroup("posts")
     .where("published", "==", true)
