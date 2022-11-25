@@ -4,7 +4,7 @@ import { HeartIcon } from "../assets/Icons";
 
 
 // UI component for main post content
-export default function PostContent({ post }: any) {
+export default function PostContent({ post, children, language }: any) {
   const createdAt =
     typeof post?.createdAt === "number"
       ? new Date(post.createdAt)
@@ -30,7 +30,7 @@ export default function PostContent({ post }: any) {
       
         </span>
       </div>
-      <div className="bg-white mt-6 text-black dark:text-white dark:bg-primary_pale_dark rounded-md p-5">
+      <div className="bg-white mt-6 relative overflow-hidden text-black dark:text-white dark:bg-primary_pale_dark rounded-md p-5">
       <ReactMarkdown>{post?.content}</ReactMarkdown>
       </div>
       

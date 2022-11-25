@@ -6,6 +6,7 @@ import { useUserData } from "../lib/authhook";
 import { Toaster } from "react-hot-toast";
 import Layout from "../Components/Layout";
 import {ThemeProvider} from 'next-themes';
+import Footer from "../Components/Footer";
 function MyApp({ Component, pageProps }: AppProps) {
   const userData = useUserData();
 
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Layout>
           <Header />
           <Component {...pageProps} />
+          <Footer />
           <Toaster />
         </Layout>
       </ThemeProvider>

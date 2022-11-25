@@ -12,6 +12,7 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import { DeleteBin, Eye, Flask, Tools } from "../../assets/Icons";
 
+
 export default function AdminPostEdit(props: any) {
   return (
     <AuthCheck>
@@ -50,8 +51,8 @@ function PostManager() {
               preview={preview}
             />
           </section>
-          <aside className="flex  flex-col mt-5 py-4 items-center rounded-md bg-accent_blue text-white">
-            <div className="flex items-center space-x-2">
+          <aside className="flex max-h-[500px] sticky flex-col mt-5 py-4 items-center rounded-md bg-accent_blue text-white">
+            <div className="flex  items-center space-x-2">
               <Tools />
               <h3 className="text-xl font-bold  ">Tools</h3>
             </div>
@@ -77,13 +78,7 @@ function PostManager() {
                 <Eye /> Live View
               </m.button>
             </Link>
-            <m.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.9 }}
-              className="mt-4 bg-orange-400 rounded-md flex items-center gap-2  md:mx-9 font-bold text-white  py-3 px-4"
-            >
-              <ImageUploader />
-            </m.button>
+            <ImageUploader />
             <DeletePostButton postRef={postRef} />
             <div>
               <a
@@ -165,6 +160,7 @@ function PostForm({ defaultValues, postRef, preview }: any) {
           </fieldset>
 
           <button
+            onClick={() => toast.success("Post saved successfully!")}
             type="submit"
             className="text-white text-xl font-bold  py-2 cursor-pointer bg-green-400"
             disabled={!isDirty || !isValid}

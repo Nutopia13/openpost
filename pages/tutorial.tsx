@@ -25,7 +25,30 @@ const Tutorial = () => {
         </span>
       </div>
       <div className="bg-white mt-6 text-black dark:text-white dark:bg-primary_pale_dark rounded-md p-5">
-      <ReactMarkdown>Hello World</ReactMarkdown>
+       
+          <h2 className="text-xl font-bold pb-2">Open Post Blog Platform</h2>
+          a new blog
+          platform that encourages you to share your code and discuss it. 
+          Here at Open Post, our primary goal is to make sure you have a great
+          experience with our platform. 
+    
+   
+       
+          <h2 className="text-xl font-bold py-4">What can you do with Open Post?</h2>
+   
+           <ul className="pb-4 list-disc space-y-2">
+              <li>Share your code.</li>
+              <li>Discuss your code.</li>
+              <li>Get feedback on your code.</li>
+              <li>Get help with your code.</li>
+              <li>Get inspired by other people's code.</li>
+              <li>Have fun !</li>
+
+           </ul>
+      
+           <p className="text-[12px] opacity-60  ">P.s This is the beta version, if you have
+          any feedback or suggestions please let me know. You can do it by email
+          or opening an issue on GitHub.</p>
       </div>
     </div>
   );

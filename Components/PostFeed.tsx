@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ErrorCircle, HeartIcon, SuccessCircle } from "../assets/Icons";
-import people from "../assets/36.jpg";
+import ReactMarkdown from "react-markdown";
 import { motion as m } from "framer-motion";
 export default function PostFeed({ posts, admin }: any) {
   return posts
@@ -35,7 +35,7 @@ function PostItem({ post, admin = false }: any) {
               {post.title}
             </h4>
             <p className="pt-4 h-24 relative text-black dark:text-white overflow-hidden">
-              {post.content.substring(0, 100)}...
+              <ReactMarkdown>{post.content.substring(0, 100)}</ReactMarkdown>
             </p>
             <Link href={`/${post.username}`}>
               <div className="pt-6 flex items-center space-x-5 bottom-0">

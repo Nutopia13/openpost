@@ -19,7 +19,7 @@ const Hero = () => {
             <li></li>
           </ul>
         </div>
-        <div className="flex p-6">
+        <div className="flex relative z-20 p-6">
           <div className="flex flex-col text-left">
             <h1 className="text-2xl lg:text-4xl font-bold">Open Post</h1>
             <p className="pt-5 lg:text-xl max-w-[400px]">

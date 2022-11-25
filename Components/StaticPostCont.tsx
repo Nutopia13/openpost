@@ -21,7 +21,7 @@ const StaticPostCont = () => {
             Guide to Mastering Open Blog
           </h4>
           <p className="pt-4 h-24 relative text-black dark:text-white overflow-hidden">
-            This is a tutorial of this platform
+          A new blog platform that encourages you to share your code and discuss it. 
           </p>
           <Link href={`/tutorial`}>
             <div className="pt-6 flex items-center space-x-5 bottom-0">
