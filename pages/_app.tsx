@@ -1,8 +1,25 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Header from "../Components/Header";
+import { UserContext } from "../lib/context";
+import { useUserData } from "../lib/authhook";
+import { Toaster } from "react-hot-toast";
+import Layout from "../Components/Layout";
+import {ThemeProvider} from 'next-themes';
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const userData = useUserData();
+
+  return (
+    <UserContext.Provider value={userData}>
+      <ThemeProvider attribute="class">
+        <Layout>
+          <Header />
+          <Component {...pageProps} />
+          <Toaster />
+        </Layout>
+      </ThemeProvider>
+    </UserContext.Provider>
+  );
 }
 
-export default MyApp
+export default MyApp;
