@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Link from "next/link";
 import { DarkMode, LightMode, UserIcon } from "../assets/Icons";
 import { useContext, useEffect, useState } from "react";
