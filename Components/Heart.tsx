@@ -31,8 +31,8 @@ export default function Heart({ postRef }: any) {
   };
 
   return heartDoc?.exists ? (
-    <button className='flex items-center gap-2 text-black dark:text-white' onClick={removeHeart}><HeartBreak /> Unheart</button>
+    <button className='flex items-center gap-2 text-black dark:text-white' onClick={addHeart}> <HeartIcon /> Heart</button> 
   ) : (
-    <button className='flex items-center gap-2 text-black dark:text-white' onClick={addHeart}> <HeartIcon /> Heart</button>
+    <button className='flex items-center gap-2 text-black dark:text-white' onClick={removeHeart}><HeartBreak /> Unheart</button>
   );
 }

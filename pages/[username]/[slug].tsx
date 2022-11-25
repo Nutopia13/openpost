@@ -58,7 +58,7 @@ export default function Post(props: any) {
   const post = realtimePost || props.post;
   const { user: currentUser } = useContext(UserContext);
   return (
-    <main className="flex flex-col  mt-5 mx-6 max-w-[1100px] md:mx-auto">
+    <main className="flex flex-col  mt-5 mx-6  max-w-[1100px] md:mx-11 lg:mx-auto">
       <Metatags title={post.title} description={post.content} />
       <section>
         <PostContent post={post} />

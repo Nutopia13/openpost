@@ -3,7 +3,7 @@ import { HeartIcon } from "../assets/Icons";
 
 const Tutorial = () => {
   return (
-    <div className="flex flex-col  mt-5 mx-6 max-w-[1100px] md:mx-auto">
+    <div className="flex flex-col md:mx-11  mt-5 mx-6 max-w-[1100px] lg:mx-auto">
       <div className="text-center md:text-left">
         <h1 className=" font-bold text-2xl">Guide to Mastering Open Blog</h1>
         <span className="text-sm text-slate-400">
