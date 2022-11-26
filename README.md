@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [Planets Fact Site](#planets-fact-site)
+- [Open Post](#open-post)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![]('./public/OpenPostScreen.png')
+![]('./../public/OpenPostScreen.png')
 
 
 ### Links
