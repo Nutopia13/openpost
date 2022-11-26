@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![]('./../public/OpenPostScreen.png')
+![]('./OpenPostScreen.png')
 
 
 ### Links
