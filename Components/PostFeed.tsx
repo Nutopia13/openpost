@@ -35,7 +35,7 @@ function PostItem({ post, admin = false }: any) {
               {post.title}
             </h4>
             <p className="pt-4 h-24 relative text-black dark:text-white overflow-hidden">
-              <ReactMarkdown>{post.content.substring(0, 100)}</ReactMarkdown>
+              <ReactMarkdown>{post.content.substring(0, 70)}</ReactMarkdown>...
             </p>
             <Link href={`/${post.username}`}>
               <div className="pt-6 flex items-center space-x-5 bottom-0">
