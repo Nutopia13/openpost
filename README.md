@@ -1,27 +1,83 @@
-# Next.js + Tailwind CSS Example
+# Open Post
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Table of contents
 
-## Deploy your own
+- [Planets Fact Site](#planets-fact-site)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+  - [Author](#author)
+    
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
 
-## How to use
+## Overview
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+### The challenge
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+Users should be able to:
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Make a Post
+- Like others people Posts
+- Upload Images
+- And many more
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+### Screenshot
+
+![](./public/Screenshot%20Planets.png)
+.
+
+### Links
+
+- Live Site URL: [https://openpost.vercel.app/]
+
+## My process
+
+- Configured Firebase for Back-End Databse Storage
+- Next js Setup and Routing
+- Firebase Auth Function, Google Auth
+- SSR and SEO in Next js
+- Metatags
+- Tools. Image Upload, Preview, Edit, Live View
+- Heart Count
+- Styling 
+- Database Security
+- Deployment to Vercel
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Next Router
+- Mobile-first workflow
+- [Next.js](https://nextjs.org/) - React Framework
+- FireBase DataBase
+- Tailwind - For Styles
+
+
+
+### What I learned
+
+I've learned so much, while developing
+- This is a first project where I connect Back-End (Firebase) and Front-End(Next.js). 
+- Database Storage
+- API config
+- Realtime Data Hydration
+
+
+## Author
+
+- Website - [Vladyslav Nechytailo](https://www.vladnechyt.com/)
+- Twitter - [@V_Nechytailo](https://twitter.com/V_Nechytailo)
+
