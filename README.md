@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/Screenshot%20Planets.png)
-.
+![]('./public/OpenPostScreen.png')
+
 
 ### Links
 
