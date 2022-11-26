@@ -74,6 +74,7 @@ I've learned so much, while developing
 - Database Storage
 - API config
 - Realtime Data Hydration
+- Next Themes (Light/Dark Mode)
 
 
 ## Author
