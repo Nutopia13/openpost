@@ -9,6 +9,7 @@ import Heart from "../../Components/Heart";
 import AuthCheck from "../../lib/AuthCheck";
 import { useContext } from "react";
 import { UserContext } from "../../lib/context";
+import Layout from "../../Components/Layout";
 
 export async function getStaticProps({ params }: any) {
   const { username, slug } = params;
@@ -58,26 +59,28 @@ export default function Post(props: any) {
   const post = realtimePost || props.post;
   const { user: currentUser } = useContext(UserContext);
   return (
-    <main className="flex flex-col  mt-5 mx-6  max-w-[1100px] md:mx-11 lg:mx-auto">
-      <Metatags title={post.title} description={post.content} />
-      <section>
-        <PostContent post={post} />
-        <aside>
-          <aside className="card">
-            <AuthCheck>
-              <Heart postRef={postRef} />
-            </AuthCheck>
+    <Layout>
+      <main className="flex flex-col  mt-5 mx-6  max-w-[1100px] md:mx-11 lg:mx-auto">
+        <Metatags title={post.title} description={post.content} />
+        <section>
+          <PostContent post={post} />
+          <aside>
+            <aside className="card">
+              <AuthCheck>
+                <Heart postRef={postRef} />
+              </AuthCheck>
 
-            {currentUser?.uid === post.uid && (
-              <Link href={`/admin/${post.slug}`}>
-                <button className="bg-accent_blue mx-auto rounded-md px-6 py-2 mt-3 text-white font-bold">
-                  Edit Post
-                </button>
-              </Link>
-            )}
+              {currentUser?.uid === post.uid && (
+                <Link href={`/admin/${post.slug}`}>
+                  <button className="bg-accent_blue mx-auto rounded-md px-6 py-2 mt-3 text-white font-bold">
+                    Edit Post
+                  </button>
+                </Link>
+              )}
+            </aside>
           </aside>
-        </aside>
-      </section>
-    </main>
+        </section>
+      </main>
+    </Layout>
   );
 }

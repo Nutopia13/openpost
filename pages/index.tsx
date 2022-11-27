@@ -6,6 +6,7 @@ import { useState } from "react";
 import Loading from "../Components/Loader";
 import { motion as m } from "framer-motion";
 import StaticPostCont from "../Components/StaticPostCont";
+import Layout from "../Components/Layout";
 const LIMIT = 4;
 
 export async function getServerSideProps(context: any) {
@@ -54,25 +55,27 @@ const Home = (props: any) => {
     }
   };
   return (
-    <main className="px-6 flex flex-col">
-      <Hero />
-      <div className="max-w-[1110px] mt-7 gap-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <StaticPostCont />
-        <PostFeed posts={posts} />
-      </div>
-      {!loading && !postsEnd && (
-        <m.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={getMorePosts}
-          className="bg-accent_blue mx-auto mt-6 rounded-md px-6 py-2 text-white font-bold"
-        >
-          Load more
-        </m.button>
-      )}
-      <Loading show={loading} />
-      {postsEnd && "You have reached the end!"}
-    </main>
+    <Layout>
+      <main className="px-6 flex flex-col">
+        <Hero />
+        <div className="max-w-[1110px] mt-7 gap-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <StaticPostCont />
+          <PostFeed posts={posts} />
+        </div>
+        {!loading && !postsEnd && (
+          <m.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={getMorePosts}
+            className="bg-accent_blue mx-auto mt-6 rounded-md px-6 py-2 text-white font-bold"
+          >
+            Load more
+          </m.button>
+        )}
+        <Loading show={loading} />
+        {postsEnd && "You have reached the end!"}
+      </main>
+    </Layout>
   );
 };
 

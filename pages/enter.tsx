@@ -6,24 +6,27 @@ import { UserContext } from "../lib/context";
 import debounce from "lodash.debounce";
 import { useEffect, useState, useCallback } from "react";
 import Metatags from "../Components/Metatags";
-import {motion as m} from 'framer-motion'
+import { motion as m } from "framer-motion";
+import Layout from "../Components/Layout";
 
 export default function SignIn(props: any) {
   const { user, username } = useContext(UserContext);
 
   return (
-    <main>
-      <Metatags title="Enter" description="Sign up for this amazing app!" />
-      {user ? (
-        !username ? (
-          <UsernameForm />
+    <Layout>
+      <main>
+        <Metatags title="Enter" description="Sign up for this amazing app!" />
+        {user ? (
+          !username ? (
+            <UsernameForm />
+          ) : (
+            <SignOutButton />
+          )
         ) : (
-          <SignOutButton />
-        )
-      ) : (
-        <SignInButton />
-      )}
-    </main>
+          <SignInButton />
+        )}
+      </main>
+    </Layout>
   );
 }
 
@@ -34,10 +37,10 @@ function SignInButton() {
   };
 
   return (
-    <>
+    <Layout>
       <m.button
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.9 }}
         className="flex bg-neutral_grey mx-auto  mt-7 md:mx-10 font-bold text-white rounded-md items-center space-x-2 py-3 px-6"
         onClick={signInWithGoogle}
       >
@@ -45,14 +48,14 @@ function SignInButton() {
         <p>Sign in with Google</p>
       </m.button>
       <m.button
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.9 }}
         className="flex bg-neutral_grey mx-auto  mt-7 md:mx-10 font-bold text-white rounded-md items-center space-x-2 py-3 px-7"
         onClick={() => auth.signInAnonymously()}
       >
         Sign in Anonymously
       </m.button>
-    </>
+    </Layout>
   );
 }
 
@@ -167,7 +170,6 @@ function UsernameForm() {
   );
 }
 {
-
 }
 function UsernameMessage({ username, isValid, loading }: any) {
   if (loading) {

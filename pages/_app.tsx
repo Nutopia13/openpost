@@ -6,20 +6,21 @@ import { UserContext } from "../lib/context";
 import { useUserData } from "../lib/authhook";
 import { Toaster } from "react-hot-toast";
 import Layout from "../Components/Layout";
-import {ThemeProvider} from 'next-themes';
+import { ThemeProvider } from "next-themes";
 import Footer from "../Components/Footer";
+import { AnimatePresence } from "framer-motion";
 function MyApp({ Component, pageProps }: AppProps) {
   const userData = useUserData();
 
   return (
     <UserContext.Provider value={userData}>
       <ThemeProvider attribute="class">
-        <Layout>
-          <Header />
+        <Header />
+        <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} />
-          <Footer />
-          <Toaster />
-        </Layout>
+        </AnimatePresence>
+        <Footer />
+        <Toaster />
       </ThemeProvider>
     </UserContext.Provider>
   );

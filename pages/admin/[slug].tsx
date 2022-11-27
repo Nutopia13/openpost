@@ -12,7 +12,7 @@ import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { DeleteBin, Eye, Flask, Tools } from "../../assets/Icons";
-
+import Layout from "../../Components/Layout";
 
 export default function AdminPostEdit(props: any) {
   return (

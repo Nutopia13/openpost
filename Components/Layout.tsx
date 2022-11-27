@@ -1,13 +1,28 @@
-import React from 'react'
-import Metatags from './Metatags'
+import React from "react";
+import Metatags from "./Metatags";
+import { motion as m } from "framer-motion";
 
-const Layout = ({children}:any) => {
+const variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -100 },
+};
+
+const Layout = ({ children }: any) => {
   return (
     <>
-    <Metatags />
-    <main>{children}</main>
+      <Metatags />
+      <m.main
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ type: "linear", duration: 1 }}
+      >
+        {children}
+      </m.main>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

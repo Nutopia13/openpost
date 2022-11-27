@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import { Add } from "../../assets/Icons";
 import { motion as m } from "framer-motion";
 import Metatags from "../../Components/Metatags";
+import Layout from "../../Components/Layout";
 
 export default function AdminPostsPage(props: any) {
   return (
@@ -87,31 +88,33 @@ function CreateNewPost() {
   };
 
   return (
-    <section className="flex max-w-[1110px]  items-center lg:mx-auto justify-center mt-5 mx-6 rounded-md dark:bg-primary_pale_dark bg-white">
-      <form
-        onSubmit={createPost}
-        className="flex items-center px-4 py-4 flex-col space-y-5"
-      >
-        <input
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="My Awesome Article!"
-          className="outline-none  py-2 border-2 text-black dark:text-white dark:border-primary_pale_dark dark:bg-[#121721;] rounded-md text-xl font-bold text-center w-full"
-        />
-        <p className="text-black dark:text-white">
-          <strong>Title:</strong> {slug}
-        </p>
-        <m.button
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.9 }}
-          type="submit"
-          disabled={!isValid}
-          className="rounded-lg font-bold flex text-white items-center cursor-pointer bg-green-500 p-2"
+    <Layout>
+      <section className="flex max-w-[1110px]  items-center lg:mx-auto justify-center mt-5 mx-6 rounded-md dark:bg-primary_pale_dark bg-white">
+        <form
+          onSubmit={createPost}
+          className="flex items-center px-4 py-4 flex-col space-y-5"
         >
-          Create Post
-          <Add />
-        </m.button>
-      </form>
-    </section>
+          <input
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="My Awesome Article!"
+            className="outline-none  py-2 border-2 text-black dark:text-white dark:border-primary_pale_dark dark:bg-[#121721;] rounded-md text-xl font-bold text-center w-full"
+          />
+          <p className="text-black dark:text-white">
+            <strong>Title:</strong> {slug}
+          </p>
+          <m.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.9 }}
+            type="submit"
+            disabled={!isValid}
+            className="rounded-lg font-bold flex text-white items-center cursor-pointer bg-green-500 p-2"
+          >
+            Create Post
+            <Add />
+          </m.button>
+        </form>
+      </section>
+    </Layout>
   );
 }
