@@ -38,11 +38,13 @@ function PostItem({ post, admin = false }: any) {
               <ReactMarkdown>{post.content.substring(0, 70)}</ReactMarkdown>...
             </p>
             <Link href={`/${post.username}`}>
-              <div className="pt-6 flex items-center space-x-5 bottom-0">
-                <Image
-                  src={post?.photoURL}
+              <div className="pt-6  flex items-center space-x-5 bottom-0">
+                <img
+                  src={`https://robohash.org/${post.username}.png`}
                   alt=""
-                  className="rounded-full  w-14"
+                  className="rounded-full  w-14 bg-slate-500"
+                  
+
                 />
                 <div>
                   <p className="text-accent_blue font-bold">@{post.username}</p>

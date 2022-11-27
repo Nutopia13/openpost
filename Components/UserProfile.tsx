@@ -4,8 +4,8 @@ export default function UserProfile({ user }: any) {
   return (
     <div className="box-center space-y-5 mt-12">
       <img
-        src={user?.photoURL || "/assets/man.png"}
-        className="card-img-center"
+        src={`https://robohash.org/${user.username}.png`}
+        className="card-img-center bg-slate-500"
       />
       <p>
         <i>@{user.username}</i>

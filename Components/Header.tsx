@@ -96,9 +96,9 @@ const Header = () => {
               <Link href={`/${username}`} className="hidden md:block ">
                 {user ? (
                   <img
-                    src={user?.photoURL}
+                    src={`https://robohash.org/${username}.png`}
                     alt="User Photo"
-                    className="rounded-full w-12"
+                    className="rounded-full w-12 bg-slate-500"
                   />
                 ) : (
                   <div className="p-2 rounded-full bg-accent_blue">
