@@ -56,7 +56,7 @@ const Home = (props: any) => {
   };
   return (
     <Layout>
-      <main className="px-6 flex flex-col">
+      <main className="px-6 md:px-10  flex flex-col">
         <Hero />
         <div className="max-w-[1110px] mt-7 gap-5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <StaticPostCont />
