@@ -73,7 +73,7 @@ const Home = (props: any) => {
           </m.button>
         )}
         <Loading show={loading} />
-        {postsEnd && "You have reached the end!"}
+        <div className="w-full flex justify-center  mt-6 md:mt-10 text-black dark:text-white">{postsEnd && "You have reached the end 😢"}</div>
       </main>
     </Layout>
   );

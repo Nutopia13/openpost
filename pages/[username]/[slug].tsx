@@ -65,7 +65,7 @@ export default function Post(props: any) {
         <section>
           <PostContent post={post} />
           <aside>
-            <aside className="card">
+            <aside className="card mt-6">
               <AuthCheck>
                 <Heart postRef={postRef} />
               </AuthCheck>

@@ -2,7 +2,7 @@
 import { firestore, auth, increment } from '../lib/firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import { HeartBreak, HeartIcon } from '../assets/Icons';
-
+import {motions as m} from  'framer-motion'
 // Allows user to heart or like a post
 export default function Heart({ postRef }: any) {
   // Listen to heart document for currently logged in user
@@ -31,8 +31,8 @@ export default function Heart({ postRef }: any) {
   };
 
   return heartDoc?.exists ? (
-    <button className='flex items-center gap-2 text-black dark:text-white' onClick={addHeart}> <HeartIcon /> Heart</button> 
+    <button className='flex items-center gap-1 text-black bg-slate-500 px-6 py-3 rounded-md dark:text-white' onClick={addHeart}> <HeartIcon /> Heart</button> 
   ) : (
-    <button className='flex items-center gap-2 text-black dark:text-white' onClick={removeHeart}><HeartBreak /> Unheart</button>
+    <button className='flex items-center gap-1 text-black bg-slate-500 px-6 py-3 rounded-md dark:text-white' onClick={removeHeart}><HeartBreak /> Unheart</button>
   );
 }
