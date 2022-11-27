@@ -36,8 +36,8 @@ function PostList() {
 
   return (
     <div className="max-w-[1110px] mx-auto my-5 ">
-      <h1 className="text-2xl font-bold mx-6 md:mx-0">Manage Posts</h1>
-      <div className="max-w-[1110px] mx-6 mt-7 gap-5 md:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <h1 className="text-2xl font-bold mx-6 lg:mx-0">Manage Posts</h1>
+      <div className="max-w-[1110px] mx-6 mt-7 gap-5 lg:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <PostFeed posts={posts} admin />
       </div>
     </div>
