@@ -25,9 +25,10 @@ const StaticPostCont = () => {
           </p>
           <Link href={`/tutorial`}>
             <div className="pt-6 flex items-center space-x-5 bottom-0">
-           <div>
-            <Crown />
-           </div>
+            <img
+                  src={`https://robohash.org/Founder.png`}
+                  alt=""
+                  className="rounded-full  w-14 bg-slate-500"></img>
               <div>
                 <p className="text-accent_blue font-bold">@founder</p>
                 <p className="text-sm dark:text-white/70 text-black/50">
