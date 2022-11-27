@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![]('./../public/OpenPostScreen.png')
+![]('./OpenPostScreen.png')
 
 
 ### Links
@@ -74,6 +74,7 @@ I've learned so much, while developing
 - Database Storage
 - API config
 - Realtime Data Hydration
+- Next Themes (Light/Dark Mode)
 
 
 ## Author
