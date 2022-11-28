@@ -7,32 +7,32 @@ const Tutorial = () => {
     <Layout>
       <main className="flex flex-col md:mx-11  mt-5 mx-6 max-w-[1100px] lg:mx-auto">
         <section className="text-center md:text-left">
-          <h1 className=" font-bold text-2xl">Guide to Mastering Open Blog</h1>
+          <h1 className="text-2xl font-bold ">Guide to Mastering Open Blog</h1>
           <span className="text-sm text-slate-400">
             Written by{" "}
-            <Link href={`/index`} className="text-accent_blue font-bold">
+            <Link href={`/index`} className="font-bold text-accent_blue">
               @founder
             </Link>{" "}
             on 24/11/2022
-            <aside className="flex items-center md:justify-start justify-center space-x-3">
+            <aside className="flex items-center justify-center space-x-3 md:justify-start">
               <p className="pt-2">🔹6 min</p>
               <p>
-                <strong className="flex text-black items-center dark:text-white gap-x-1 mt-3">
+                <strong className="flex items-center mt-3 text-black dark:text-white gap-x-1">
                   5 <HeartIcon />
                 </strong>
               </p>
             </aside>
           </span>
         </section>
-        <div className="bg-white mt-6 text-black dark:text-white dark:bg-primary_pale_dark rounded-md p-5">
-          <h2 className="text-xl font-bold pb-2">Open Post Blog Platform</h2>a
+        <div className="p-5 mt-6 text-black bg-white rounded-md dark:text-white dark:bg-primary_pale_dark">
+          <h2 className="pb-2 text-xl font-bold">Open Post Blog Platform</h2>a
           new blog platform that encourages you to share your code and discuss
           it. Here at Open Post, our primary goal is to make sure you have a
           great experience with our platform.
-          <h2 className="text-xl font-bold py-4">
+          <h2 className="py-4 text-xl font-bold">
             What can you do with Open Post?
           </h2>
-          <ul className="pb-4 list-disc space-y-2">
+          <ul className="pb-4 space-y-2 list-disc">
             <li>Share your code.</li>
             <li>Discuss your code.</li>
             <li>Get feedback on your code.</li>

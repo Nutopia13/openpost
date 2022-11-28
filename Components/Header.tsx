@@ -67,7 +67,7 @@ const Header = () => {
           <m.h3
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
-            className="text-white bg-black  font-extrabold px-6 py-3 text-xl rounded-md "
+            className="px-6 py-3 text-xl font-extrabold text-white bg-black rounded-md "
           >
             OP
           </m.h3>
@@ -80,7 +80,7 @@ const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={signOut}
-                className="bg-accent_blue hidden md:block rounded-md px-6 py-2 text-white font-bold"
+                className="hidden px-6 py-2 font-bold text-white rounded-md bg-accent_blue md:block"
               >
                 Sign Out
               </m.button>
@@ -88,7 +88,7 @@ const Header = () => {
                 <m.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.9 }}
-                  className="bg-accent_blue rounded-md px-6 py-2 text-white font-bold"
+                  className="px-6 py-2 font-bold text-white rounded-md bg-accent_blue"
                 >
                   Write Post
                 </m.button>
@@ -98,7 +98,7 @@ const Header = () => {
                   <img
                     src={`https://robohash.org/${username}.png`}
                     alt="User Photo"
-                    className="rounded-full w-12 bg-slate-500"
+                    className="w-12 rounded-full bg-slate-500"
                   />
                 ) : (
                   <div className="p-2 rounded-full bg-accent_blue">
@@ -113,7 +113,7 @@ const Header = () => {
               <m.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
-                className="bg-accent_blue rounded-md px-6 py-2 text-white font-bold"
+                className="px-6 py-2 font-bold text-white rounded-md bg-accent_blue"
               >
                 Log In
               </m.button>

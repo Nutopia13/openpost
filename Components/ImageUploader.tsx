@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { auth, storage, STATE_CHANGED } from "../lib/firebase";
 import Loader from "./Loader";
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import { motion as m } from "framer-motion";
 import toast from "react-hot-toast";
 // Uploads images to Firebase Storage
@@ -40,24 +40,30 @@ export default function ImageUploader() {
       .then((d) => ref.getDownloadURL())
       .then((url) => {
         setDownloadURL(url);
-        setUploading(false); 
-      })
-    toast.success(<div>Image Uploaded. Press <span className="text-orange-400">Copy Image URL</span> and paste in your post.</div>, {
-      icon: "👍",
-      style: { borderRadius: "10px", background: "#333", color: "#fff" },
-      duration: 8000,
-    });
+        setUploading(false);
+      });
+    toast.success(
+      <div>
+        Image Uploaded. Press{" "}
+        <span className="text-orange-400">Copy Image URL</span> and paste in
+        your post.
+      </div>,
+      {
+        icon: "👍",
+        style: { borderRadius: "10px", background: "#333", color: "#fff" },
+        duration: 8000,
+      }
+    );
   };
 
   return (
     <div className="box">
-
       {!uploading && (
         <>
           <m.label
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
-            className="mt-4 cursor-pointer bg-orange-400 rounded-md flex items-center gap-2  md:mx-9 font-bold text-white  py-3 px-4"
+            className="flex items-center gap-2 px-4 py-3 mt-4 font-bold text-white bg-orange-400 rounded-md cursor-pointer md:mx-9"
           >
             📸 Upload Img
             <input
@@ -73,7 +79,9 @@ export default function ImageUploader() {
           text={`![alt](${downloadURL})`}
           onCopy={() => toast.success("Copied")}
         >
-          <m.button className="mt-4 cursor-pointer bg-orange-400 rounded-md flex items-center gap-2  md:mx-9 font-bold text-white  py-3 px-4">Copy Image URL</m.button>
+          <m.button className="flex items-center gap-2 px-4 py-3 mt-4 font-bold text-white bg-orange-400 rounded-md cursor-pointer md:mx-9">
+            Copy Image URL
+          </m.button>
         </CopyToClipboard>
       </div>
     </div>

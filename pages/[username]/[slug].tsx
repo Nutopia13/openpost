@@ -65,14 +65,14 @@ export default function Post(props: any) {
         <section>
           <PostContent post={post} />
           <aside>
-            <aside className="card mt-6">
+            <aside className="mt-6 card">
               <AuthCheck>
                 <Heart postRef={postRef} />
               </AuthCheck>
 
               {currentUser?.uid === post.uid && (
                 <Link href={`/admin/${post.slug}`}>
-                  <button className="bg-accent_blue mx-auto rounded-md px-6 py-2 mt-3 text-white font-bold">
+                  <button className="px-6 py-2 mx-auto mt-3 font-bold text-white rounded-md bg-accent_blue">
                     Edit Post
                   </button>
                 </Link>

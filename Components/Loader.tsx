@@ -1,3 +1,3 @@
 export default function Loader({ show }: any) {
-    return show ? <div className="loader"></div> : null;
-  }
+  return show ? <div className="loader"></div> : null;
+}
